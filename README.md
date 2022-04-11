@@ -1,15 +1,19 @@
-h1. OAuth2/OIDC demo for system to integration
+# OAuth2/OIDC demo for system to integration
 
-h2. SOLELY FOR DEMO PURPOSES!
+## SOLELY FOR DEMO PURPOSES!
 
-h2. Setup
+## Purpose
 
-h3. Requirements
+A locally runnable demo for creating a trusted connection between to systems using OAuth2 Authorization code and Client credentials grant.
+
+## Setup
+
+### Requirements
 
 * Docker https://www.docker.com/get-started/
 * Python 3 (tested with 3.8)
 
-h3. Install dependencies
+### Install dependencies
 
 Python virtual environment is strongly recommended.
 
@@ -17,7 +21,7 @@ Python virtual environment is strongly recommended.
 * Activate virtual env by `source venb/bin/activate` (or on Windows `.venv\Scripts\activate`)
 * Install libraries `pip install -r requirements.txt`
 
-h3. Running the demo
+### Running the demo
 
 Start the mock OAuth2/OIDC server `docker compose up -d` (Mock server can be shutdown with `docker compose down`)
 
