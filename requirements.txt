@@ -1,0 +1,2 @@
+pysimplegui==4.59.0
+oauthlib==3.2.0
