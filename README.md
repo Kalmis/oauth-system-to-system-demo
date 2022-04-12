@@ -4,7 +4,7 @@
 
 ## Purpose
 
-A locally runnable demo for creating a trusted connection between to systems using OAuth2 Authorization code and Client credentials grant.
+A locally runnable demo for acquiring access token from OAuth2/OIDC server, so requests can be made to a secured endpoints.
 
 ## Setup
 
