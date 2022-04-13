@@ -12,8 +12,6 @@ redirect_uri = 'http://localhost:3000/auth/oidc'
 
 client = BackendApplicationClient(client_id)
 
-code_verifier = client.create_code_verifier(50)
-
 description_text = """This is a demo app for showing how MSQ-Kaiku 
 authentication & authorization could be implemented with OAuth2.
 """
@@ -42,14 +40,11 @@ while True:
     # End program if user closes window or
     # presses the OK button
     if event == 'Connect to Kaiku':
-        code_challenge = client.create_code_challenge(code_verifier, code_challenge_method='S256')
         url = f'{base_url}/token'
         headers = {'Content-Type': 'application/x-www-form-urlencoded'}
         # Create a URL to which client (user) browser should be redirected to
         dada = client.prepare_request_body(scope=['some-app-scope-1'], # offline_access provides refresh token
                                         include_client_id=True,
-                                        code_challenge=code_challenge,
-                                        code_challenge_method='S256',
                                         client_secret=client_secret
                                         )
         r = requests.post(url, headers=headers, data=dada)
